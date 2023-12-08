@@ -180,6 +180,17 @@ def display_raw_data(df):
         print(df.iloc[start_loc:start_loc + 5])
         start_loc += 5
         show_data = input("Do you wish to continue? Enter yes or no: ").lower()
+        
+def display_raw_data(df):
+    """
+    Displays 5 rows of raw data at a time upon user request.
+    """
+    show_data = input("Would you like to see 5 rows of raw data? Enter yes or no: ").lower()
+    start_loc = 0
+    while show_data == 'yes':
+        print(df.iloc[start_loc:start_loc + 5])
+        start_loc += 5
+        show_data = input("Do you wish to continue? Enter yes or no: ").lower()
 
 def main():
     while True:
